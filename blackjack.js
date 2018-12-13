@@ -1,7 +1,8 @@
 
- console.log("test")
  var count=0;
  var x=0 ;
+ var dealerHand=[]
+ var playerHand=[]
  var deck = [ 
  { point: 10, suit:'hearts',imgurl:'blackjackimgs/JPEG 4/KH.jpg' }, {point: 10,suit: 'diamonds',imgurl:'blackjackimgs/JPEG 4/KD.jpg'},{point: 10, suit: 'clubs',imgurl:'blackjackimgs/JPEG 4/KC.jpg'},{point: 10,suit: 'spades',imgurl:'blackjackimgs/JPEG 4/KS.jpg'},
  { point: 10, suit: 'hearts',imgurl:'blackjackimgs/JPEG 4/QH.jpg'},{point: 10,suit: 'diamonds',imgurl:'blackjackimgs/JPEG 4/QD.jpg'},{point: 10, suit: 'clubs',imgurl:'blackjackimgs/JPEG 4/QC.jpg'},{point: 10, suit: 'spades',imgurl:'blackjackimgs/JPEG 4/QS.jpg'},
@@ -28,8 +29,7 @@
      return array;
  }
 
- var dealerHand=[]
- var playerHand=[]
+ 
  function getCardImageUrl(card){
      return card.imgurl;
 }
@@ -165,11 +165,6 @@ stdbutton.addEventListener('click',function(){
           dpt.textContent=calculatePoints(dealerHand)
 }
 
-// if(calculatePoints(dealerHand)<21 && (calculatePoints(dealerHand) > calculatePoints(playerHand))){
-//      var mess=document.getElementById('messages')
-//      mess.textContent="Dealer  Won the Game"
-
-// }
 if(calculatePoints(dealerHand)==21){
 var mess=document.getElementById('messages')
 mess.textContent="Dealer BlackJack"
